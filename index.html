@@ -214,6 +214,7 @@
     </section>
     <!-- Footer -->
     <footer id="footer">
+        
         <div class="footer_content max-width mb-0">
             <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
             <p class="mb-m">
@@ -235,12 +236,27 @@
                     <a href="https://www.facebook.com/Cinthialindolfo/"  target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
                 </li>
             </ul>
+            <p>Total de visitas: <span id="contador">0</span></p>
             <p class="footer_copyright">
                 © 2023 Cinthia Lindolfo. Todos os direitos reservados.
             </p>
         </div>
     </footer>
     <!-- Script -->
-    <script src="scripts/index.js"></script>
+    <script src="scripts/index.js">
+        function atualizarContador() {
+            if (localStorage.getItem('contadorVisitas')) {
+                var contador = parseInt(localStorage.getItem('contadorVisitas'));
+            } else {
+                var contador = 0;
+            }
+            contador++;
+
+            document.getElementById('contador').innerText = contador;
+
+            localStorage.setItem('contadorVisitas', contador);
+        }
+        window.onload = atualizarContador;
+    </script>
 </body>
 </html>
