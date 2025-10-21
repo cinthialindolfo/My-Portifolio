@@ -1,0 +1,582 @@
+/* Estilos CSS para tornar o site mais atraente */
+:root {
+  --primary: #1b3b7e;
+  --primary-dark: #40d6c2;
+  --secondary: #6C63FF;
+  --dark: #2D3748;
+  --light: #F7FAFC;
+  --gray: #718096;
+  --accent: #FF6B6B;
+  --shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.cabecalho .container {
+  position: relative;
+  z-index: 2;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+.nome {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.cargo {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Menu mobile (CSS-only) */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  justify-content: space-between;
+  padding: 5px;
+  position: absolute; /* Adicionado */
+  right: 20px; /* Adicionado */
+  top: 30px; /* Adicionado */
+  z-index: 100; /* Adicionado para ficar acima de tudo */
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.navegacao {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.navegacao a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+}
+
+.navegacao a:hover {
+  background: rgba(255,255,255,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Seções */
+.secao {
+  padding: 80px 0;
+}
+
+.fundo-claro {
+  background-color: var(--light);
+}
+
+.fundo-escuro {
+  background-color: var(--dark);
+  color: white;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.fundo-escuro h2::after {
+  background-color: var(--secondary);
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: var(--gray);
+  max-width: 600px;
+}
+
+.fundo-escuro .subtitulo {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Sobre */
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.sobre-texto p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.sobre-texto strong {
+  color: var(--primary);
+}
+
+.imagem-destaque {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  background-color: var(--light);
+  padding: 10px;
+}
+
+.foco {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.foco h3 {
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.foco ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.foco li {
+  padding: 15px;
+  background: var(--light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.foco li:hover {
+  transform: translateX(10px);
+  background: rgba(46, 139, 87, 0.1);
+}
+
+.foco i {
+  color: var(--primary);
+  margin-right: 15px;
+  width: 20px;
+  font-size: 1.1rem;
+}
+
+/* Projetos */
+.grade-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.cartao-projeto {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--dark);
+  height: auto; /* Ajuste para auto */
+}
+
+.cartao-projeto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.cartao-projeto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.projeto-imagem {
+  width: 100%;
+  max-height: 250px;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
+  background-color: var(--light);
+}
+
+.cartao-projeto h3 {
+  padding: 20px 20px 10px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.projeto-cargo,
+.projeto-descricao,
+.tag {
+  padding: 0 20px 10px;
+  font-size: 0.95rem;
+}
+
+.tag {
+  color: var(--gray);
+  font-style: italic;
+}
+
+/* Habilidades */
+.grade-habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.grupo-habilidade {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.grupo-habilidade h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.grupo-habilidade ul {
+  list-style: none;
+}
+
+.grupo-habilidade li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.grupo-habilidade li:last-child {
+  border-bottom: none;
+}
+
+/* Experiência */
+.galeria-experiencia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 50px auto;
+}
+
+.item-visual { /* Usado para Experiência e Premiações */
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 15px;
+  height: 100%; /* Garante altura uniforme */
+}
+
+.item-visual:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.foto-experiencia {
+  width: 100%;
+  max-height: 250px; /* Mantém a altura máxima para experiência */
+  height: auto;
+  object-fit: contain;
+  padding: 15px;
+  background-color: var(--light);
+  border-radius: 15px 15px 0 0;
+  filter: grayscale(20%);
+}
+
+.item-visual:hover .foto-experiencia {
+  filter: grayscale(0%);
+}
+
+.legenda-experiencia {
+  margin-top: 15px;
+  padding: 0 15px;
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 600;
+  flex-grow: 1; /* Permite que a legenda ocupe o espaço restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CORREÇÃO: Tamanho das imagens de Premiações */
+.grade-premiacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas para desktop */
+  gap: 30px;
+  margin: 50px auto;
+  justify-items: center; /* Centraliza os itens na grade */
+  align-items: start; /* Alinha os itens ao topo */
+}
+
+.foto-premiacao {
+  width: 100%; /* Ocupa a largura total do item do grid */
+  max-width: 200px; /* Limita a largura máxima da imagem em si */
+  height: auto; /* Mantém a proporção */
+  max-height: 180px; /* Altura máxima para as imagens de premiação */
+  object-fit: contain;
+  padding: 10px; /* Reduz o padding para otimizar espaço */
+  background-color: var(--light);
+  border-radius: 10px; /* Bordas um pouco menores */
+  filter: grayscale(20%);
+  transition: var(--transition);
+}
+
+.item-visual .foto-premiacao { /* Garante que o padding e borda sejam aplicados dentro do card */
+    border-radius: 15px 15px 0 0; /* Ajusta as bordas para o topo do card */
+    padding: 15px; /* Retorna o padding ao padrão do card */
+    max-height: 200px; /* Ajusta a altura da imagem dentro do card */
+}
+
+.item-visual:hover .foto-premiacao {
+  filter: grayscale(0%);
+}
+
+.legenda-premiacao {
+  margin-top: 10px; /* Ajusta a margem para mais perto da imagem */
+  padding: 0 10px; /* Reduz o padding */
+  color: var(--dark);
+  font-size: 0.9rem; /* Um pouco menor para caber */
+  font-weight: 600;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.fundo-escuro .legenda-experiencia,
+.fundo-escuro .texto-experiencia {
+  color: rgba(255,255,255,0.9);
+}
+
+.texto-experiencia {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Contato */
+.contato-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contatos a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contatos a:hover {
+  background-color: rgba(46, 139, 87, 0.1);
+  color: var(--primary-dark);
+  transform: translateX(5px);
+}
+
+.fundo-escuro .contatos a {
+  color: white;
+}
+
+.fundo-escuro .contatos a:hover {
+  color: white;
+}
+
+.imagem-contato {
+  max-height: 300px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+  background: var(--dark);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navegacao {
+    display: none; /* Esconde por padrão no mobile */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+  }
+
+  /* Mostrar menu quando checkbox estiver marcado */
+  .menu-checkbox:checked ~ .navegacao {
+    display: flex;
+  }
+
+  .navegacao a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    max-width: 250px;
+  }
+
+  .sobre-conteudo,
+  .contato-conteudo {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .grade-projetos,
+  .grade-habilidades,
+  .galeria-experiencia {
+    grid-template-columns: 1fr;
+  }
+
+  .grade-premiacoes { /* Ajuste para 2 colunas em tablets/pequenos desktops */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) { /* Em celulares, volta para 1 coluna */
+      .grade-premiacoes {
+          grid-template-columns: 1fr;
+      }
+  }
+
+  .foco ul {
+    grid-template-columns: 1fr;
+  }
+
+  .nome {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .cabecalho {
+    padding: 40px 0;
+  }
+}

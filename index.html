@@ -1,264 +1,375 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <!-- Meta tags -->
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title>Cinthia Lindolfo Portifólio</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/extends.css">
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://Fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://Fonts.gstatic.com" crossorigin />
+    <title>Cinthia Lindolfo | Tech for Good</title>
+    <meta name="description"
+      content="Product Owner apaixonada por tecnologia com propósito: acessibilidade, sustentabilidade e inovação social.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-        rel="stylesheet" 
-    />
-</head>
-<body>
-    <!-- NavBar -->
-    <nav class="navbar">
-        <div class="navbar_content max-width mb-0">
-            <a
-                href="/"> Cinthia Lindolfo
-            </a>
-            <ul class="navbar_links">
-                <li><a href="#heard">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#footer">Contatos</a></li>
-            </ul>
-            <div class="navbar_mobile">
-                <img src="assets/menu.svg" alt="menu" class="burguer"/>
-                <ul class="mobile_links">
-                    <li><a href="#heard">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#footer">Contatos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Header -->
-    <header id="header" class="max-width">
-        <div class="header_left">
-            <h1>Oi! Sou a Cinthia Lindolfo estou caminhando na área de Tecnologia da Informação(TI).</h1>
-            <p>
-                👩‍💻 Sou graduanda em Sistemas de Informação pela UFPB, iniciei minha jornada acadêmica em 2021.1. Desde então,
-                tenho participado ativamente em diversos projetos, como bolsista, voluntária, monitora, estágios, eventos, oficinas, palestras e Hackathon.
-            </p>
-            <p>
-                Essas experiências têm sido cruciais para aplicar os conhecimentos adquiridos durante o curso,
-                bem como para me proporcionar a oportunidade de aprender novas ferramentas para contribuir em projetos inovadores.
-                Além disso, têm sido valiosas para fazer networking, o que me permite manter relacionamentos com grupos de
-                pessoas da área e explorar novas áreas e culturas. Estou ansiosa para continuar explorando e crescendo durante
-                esta jornada acadêmica empolgante!
-            </p>
-            <a href="https://cinthialindolfo-curriculo.netlify.app" target="_blank"class="btn btn-primary">Saiba Mais!</a>
-        </div>
-        <div class="header_right">
-            <div class="header_image">
-                <img src="assets/cinthia.png" alt="Cinthia Lindolfo" class="cinthia" />
-                <img src="assets/abstract.svg" alt="background" class="background" />
-            </div>
-        </div>
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="container">
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+        <label for="menu-checkbox" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <img src="assets/images/cinthia.jpg" alt="Cinthia Lindolfo"
+          class="foto-perfil" loading="lazy">
+        <h1 class="nome">Cinthia Lindolfo</h1>
+        <p class="cargo">Product Owner • UX/UI • Tech for Good</p>
+        <nav class="navegacao">
+          <a href="#sobre">Sobre</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#premiacoes">Premiações</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
     </header>
-    <!-- Sobre -->
-    <section id="about" class="about max-width">
-        <div class="about_left">
-            <h2 class="secondary-title">Além do códigos e projetos: quem sou eu?</h2>
+
+    <section id="sobre" class="secao">
+      <div class="container">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-conteudo">
+          <div class="sobre-texto">
             <p>
-                Que tal se conectar comigo nas redes sociais abaixo e saber mais sobre meus
-                projetos, minha vida acadêmica e pessoal?
+              Graduanda em <strong>Sistemas de Informação pela UFPB</strong>,
+              atuo como <strong>Product Owner</strong> liderando projetos de
+              tecnologia com impacto social e ambiental.
+              Minha paixão é unir <strong>tecnologia, acessibilidade e
+                sustentabilidade</strong> para criar soluções que promovam
+              inclusão e bem-estar.
             </p>
-            <ul>
-                <li><a href="https://www.instagram.com/cinthia_lindolfo/"  target="_blank"><img src="/assets/instagram.svg" alt="Instagran"></a></li>
-                <li><a href="https://www.linkedin.com/in/cinthia-lindolfo/"  target="_blank"><img src="/assets/linkedin.svg" alt="Linkdein"></a></li>
-                <li><a href="https://www.facebook.com/Cinthialindolfo/"  target="_blank"><img src="/assets/facebook.svg" alt="Facebook"></a></li>
-            </ul>
+            <p>
+              Com experiência multifuncional em <strong>gestão de produto,
+                UX/UI, análise de dados e desenvolvimento web</strong>, busco
+              sempre uma liderança colaborativa que inspire equipes a entregar
+              resultados com propósito.
+            </p>
+          </div>
+          <div class="sobre-imagem">
+            <img src="assets/images/eucinthia.jpg" alt="Cinthia em ação"
+              class="imagem-destaque" loading="lazy">
+          </div>
         </div>
-        <div class="about_right">
-            <h3 class="tertiary-title mb-m">
-                Sempre buscando conhecimentos na área da Tecnologia para solucionar problemas
-                de forma criativa e simples!
-            </h3>
-            <p>
-                Desenvolvi um site/app de ciclismo com colegas, como parte do aprendizado na disciplina Engenharia de
-                Software Aplicada, foi uma experiência incrível e enriquecedora. Além disso, explorei projetos
-                básicos com diversas tecnologias, consolidando meu conhecimento na disciplina.
-            </p>
-            <p>
-                Participei do projeto do LabDados sobre Tecnologia Cidadã pelo PROEX e foi uma virada significativa.
-                Onde atuei como analista de dados, criação dashboards com SQL Server, o que despertou meu interesse
-                por Análise de Dados, ampliando consideravelmente minha bagagem de conhecimento.
-            </p>
-            <p>
-                Adoro enfrentar desafios, pois me impulsionam a encontrar soluções inovadoras e criativas para
-                problemas complexos. Estou em busca de oportunidades para aprender e crescer como profissional.
-            </p>
+        <div class="foco">
+          <h3>Áreas de Atuação</h3>
+          <ul>
+            <li><i class="fas fa-bullseye"></i> Product Management</li>
+            <li><i class="fas fa-palette"></i> UX/UI &amp; Web Design</li>
+            <li><i class="fas fa-chart-line"></i> Análise de Dados (Power
+              BI)</li>
+            <li><i class="fas fa-leaf"></i> Inovação Sustentável</li>
+            <li><i class="fas fa-microchip"></i> Deep Tech &amp; Tech for
+              Good</li>
+          </ul>
         </div>
+      </div>
     </section>
-    <!-- Habilidades -->
-    <section id="skills" class="skills">
-        <div class="skills_content max-widht">
-            <h2 class="tertiary-title">Minha caixinha de ferramentas</h2>
-            <p class="description">
-                Venha descobrir as habilidades e ferramentas que tenho conhecimento e que
-                me permitem criar soluções criativas e funcionais para meus projetos.
-            </p>
-            <ul>
-                <li class="skills_itens">
-                    <div class="image-container">
-                        <img src="assets/notebook.png" alt="Desenvolvimento Web" />
-                    </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>
-                        Experiência em Desenvolvimento Frontend com as ferramentas React.js, HTML, CSS.
-                    </p>
-                </li>
-                <li class="skills_itens">
-                    <div class="image-container">
-                        <img src="assets/colors.png" alt="Web Design" />
-                    </div>
-                    <h3>Web Design</h3>
-                    <p>
-                        Experiência em criar slides personalizados com Canva e Figma.
-                    </p>
-                </li>
-                <li class="skills_itens">
-                    <div class="image-container">
-                        <img src="assets/phone.png" alt="UX/IU Design" />
-                    </div>
-                    <h3>UX/IU Design</h3>
-                    <p>
-                        Experiência com Design de Interação e Experiência do Usuário
-                        visualmente atraentes e intuitivos.
-                    </p>
-                </li>
-                <li class="skills_itens">
-                    <div class="image-container">
-                        <img src="assets/files.png" alt="Análise de Dados" />
-                    </div>
-                    <h3>Análise de Dados</h3>
-                    <p>
-                        Experiência com algumas ferramentas de Análise de Dados como BI, SQL Server, Postgres, Airflow e Dashboards.
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- Projects -->
-    <section id="projects" class="projects max-width">
-        <div class="projects_content">
-            <h2 class="secondary-title">Projetos em Destaque</h2>
-            <p>
-                De ideias abstratas a projetos bem-sucedidos, aqui estão alguns dos meus trabalhos
-                que fiz após ingressar na Universidade.
-            </p>
-        </div>
-        <ul>
-            <li>
-                <div class="image">
-                    <img src="assets/task-manager.png" alt="analise de dados" />
-                </div>
-                <div class="projetcts_info">
-                    <h3 class="tertiary-title">
-                        Análise de dados 
-                    </h3>
-                    <p>
-                        Participei do projeto do Labdados da UFPB sobre Tecnologia Cidadã proporcionou
-                        uma experiência enriquecedora em análise de dados. Contribuí para a compreensão
-                        e aplicação prática de tecnologias inovadoras em contextos cidadãos, desenvolvendo
-                        habilidades valiosas na interpretação e comunicação de dados. Inclusive ele foi premiado com o 
-                        Prêmio Elo Cidadão 2023.
-                    </p>
-                    <a href="https://github.com/cinthialindolfo?tab=stars" target="_blank">Leia Mais &rarr;</a>
-                </div>
-            </li>
-            <li class="projects_reversed-list">
-                <div class="image">
-                    <img src="assets/ecommerce.png" alt="ecommerce"/>
-                </div>
-                <div class="projetcts_info">
-                    <h3 class="tertiary-title">
-                        Desenvolvimento de projetos pessoais
-                    </h3>
-                    <p>
-                        Desenvolvir alguns projetos pessoais, pois é uma maneira valiosa de aprimorar habilidades
-                        e aplicar conhecimentos. Essa iniciativa não apenas consolida o aprendizado,
-                        mas também oferece a oportunidade de explorar áreas específicas de interesse,
-                        ganhar experiência prática e construir um portfólio significativo.
-                    </p>
-                    <a href="https://github.com/cinthialindolfo" target="_blank">Leia Mais &rarr;</a>
-                </div>
-            </li>
-            <li>
-                <div class="image">
-                    <img src="assets/ciclismo app.jpg" alt="ciclismo app" />
-                </div>
-                <div class="projetcts_info">
-                    <h3 class="tertiary-title">
-                        Ciclismo App 
-                    </h3>
-                    <p>
-                        O Ciclismo App é um aplicativo inovador para ciclistas profissionais e amadores,
-                        proporcionando uma comunidade dinâmica. Com mapas interativos e calendário exclusivo,
-                        para transformar suas pedaladas em jornadas únicas, conectando-se a grupos e explorando o
-                        universo do ciclismo de maneira memorável.
-                    </p>
-                    <a href="https://github.com/cinthialindolfo?tab=stars"  target="_blank">Leia Mais &rarr;</a>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <!-- Footer -->
-    <footer id="footer">
-        
-        <div class="footer_content max-width mb-0">
-            <h2 class="tertiary-title mb-s">Vamos conversar?</h2>
-            <p class="mb-m">
-                Ficarei feliz em saber mais sobre seus projetos e como podemos trabalhar 
-                juntos para torná-los realidade.
-            </p>
-            <div class="footer_contact mb-m">
-                <span class="mb-m">cinthia20lindolfo@gmail.com</span>
-                <span>(83) 98175-8363</span>
+
+    <section id="projetos" class="secao fundo-claro">
+      <div class="container">
+        <h2>Projetos em Destaque</h2>
+        <div class="grade-projetos">
+
+          <div class="cartao-projeto">
+            <img src="assets/images/projetobeescaatinga.jpg"
+              alt="Projeto BeesCaatinga" class="projeto-imagem" loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-bee"></i> BeesCaatinga</h3>
+                <p class="projeto-cargo">Product Owner – FAPESQ/SECTIES/PB</p>
+                <p class="projeto-descricao">Gestão de produto, validação com
+                  apicultores e design de UX para solução de gestão de produção de mel na Caatinga.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Tecnologia • Gestão • SocioAmbiental</span>
+              </div>
             </div>
-            <ul class="mb-l">
-                <li>
-                    <a href="https://www.instagram.com/cinthia_lindolfo/" target="_blank"><img src="assets/instagram.svg" alt="Instagram"></a>                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/cinthia-lindolfo/"  target="_blank"><img src="assets/linkedin.svg" alt="Linkedin"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/Cinthialindolfo/"  target="_blank"><img src="assets/facebook.svg" alt="Facebook"></a>
-                </li>
-            </ul>
-            <p>Total de visitas: <span id="contador">0</span></p>
-            <p class="footer_copyright">
-                © 2023 Cinthia Lindolfo. Todos os direitos reservados.
-            </p>
+          </div>
+
+          <div class="cartao-projeto">
+            <img src="assets/images/projreflorae.jpg"
+              alt="Projeto Viveiro de Mudas" class="projeto-imagem"
+              loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-seedling"></i> Viveiro de Mudas</h3>
+                <p class="projeto-cargo">Product Owner – UFPB/PROEX</p>
+                <p class="projeto-descricao">Sistema para gestão de viveiros
+                  comunitários, com foco em educação ambiental e tecnologia
+                  cidadã.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Educação • Meio Ambiente • UX</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-projeto">
+            <img src="assets/images/eartesan-pitch.jpg" alt="Projeto e-artesan"
+              class="projeto-imagem" loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-shopping-basket"></i> e-artesan</h3>
+                <p class="projeto-cargo">CEO – Pré-Incubação PTHI</p>
+                <p class="projeto-descricao">Plataforma digital para artesãos
+                  locais, conectando produção cultural à economia criativa e
+                  sustentável.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Economia Criativa • Empreendedorismo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-projeto">
+            <img src="assets/images/brgweb.jpg" alt="Projeto BRG Web"
+              class="projeto-imagem" loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-globe"></i> BRG Web</h3>
+                <p class="projeto-cargo">Desenvolvimento Front-end</p>
+                <p class="projeto-descricao">Site institucional para a empresa
+                  de energia renovável BRG Energia.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Web Dev • Front-end • Energia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-projeto">
+            <img src="assets/images/code.jpg" alt="Projeto CODE"
+              class="projeto-imagem" loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-users"></i> Projeto CODE</h3>
+                <p class="projeto-cargo">Tutora – FUNETEC-PB</p>
+                <p class="projeto-descricao">Auxiliei estudantes no
+                  desenvolvimento de aplicativos móveis com MIT App
+                  Inventor.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Educação • Inclusão Digital •
+                  Programação</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao-projeto">
+            <img src="assets/images/eartesan-ex-ceo.jpg" alt="e-artesan CEO"
+              class="projeto-imagem" loading="lazy">
+            <div class="cartao-projeto-detalhes">
+              <div>
+                <h3><i class="fas fa-rocket"></i> Empreendedorismo</h3>
+                <p class="projeto-cargo">CEO e Founder – e-artesan</p>
+                <p class="projeto-descricao">Liderança estratégica e
+                  desenvolvimento de negócios na economia criativa e
+                  sustentável.</p>
+              </div>
+              <div class="tags-container">
+                <span class="tag">Liderança • Startups • Inovação</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
+
+    <section id="habilidades" class="secao">
+      <div class="container">
+        <h2>Habilidades &amp; Competências</h2>
+        <div class="grade-habilidades">
+          <div class="grupo-habilidade">
+            <h3><i class="fas fa-code"></i> Técnicas</h3>
+            <ul>
+              <li>Product Management (MRD, PRD, User Stories)</li>
+              <li>UX/UI Design (Figma, protótipos)</li>
+              <li>Desenvolvimento Web (HTML, CSS)</li>
+              <li>Power BI • Análise de Dados</li>
+              <li>Testes de Qualidade • Checklist</li>
+            </ul>
+          </div>
+          <div class="grupo-habilidade">
+            <h3><i class="fas fa-heart"></i> Pessoais</h3>
+            <ul>
+              <li>Liderança Colaborativa</li>
+              <li>Inteligência Emocional</li>
+              <li>Comunicação Assertiva</li>
+              <li>Resiliência • Criatividade</li>
+              <li>Foco em Propósito e Impacto</li>
+            </ul>
+          </div>
+          <div class="grupo-habilidade">
+            <h3><i class="fas fa-award"></i> Certificações</h3>
+            <ul>
+              <li>Introdução à Liderança Disruptiva (FDL)</li>
+              <li>Power BI – T01</li>
+              <li>Bootcamp Conect.AI – Deep Tech</li>
+              <li>Desafio Liga Jovem – Sebrae</li>
+              <li>Pré-Incubação – PTHI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="secao fundo-escuro">
+      <div class="container">
+        <h2>Minha Experiência em Ação</h2>
+        <p class="subtitulo">Veja como eu colaborei em diferentes projetos e
+          equipes.</p>
+        <div class="galeria-experiencia">
+          <div class="item-visual">
+            <img src="assets/images/realtodeexperiencia.jpg"
+              alt="Reunião virtual com equipe do BeesCaatinga"
+              class="foto-experiencia" loading="lazy">
+            <p class="legenda-experiencia">Reunião de equipe - BeesCaatinga</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/intercambio.jpg"
+              alt="Imersão na Anatel em Brasília" class="foto-experiencia"
+              loading="lazy">
+            <p class="legenda-experiencia">Imersão técnica - Anatel Brasília</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/networks.jpg"
+              alt="Networking em eventos de tecnologia" class="foto-experiencia"
+              loading="lazy">
+            <p class="legenda-experiencia">Networking - Eventos Tech</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/forumcfbanner.jpg"
+              alt="Participação em fórum de inovação" class="foto-experiencia"
+              loading="lazy">
+            <p class="legenda-experiencia">Fórum de Inovação</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/intercambiobr.jpeg"
+              alt="Intercâmbio internacional" class="foto-experiencia"
+              loading="lazy">
+            <p class="legenda-experiencia">Intercâmbio Internacional</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/relatodeexperiencia1.jpg"
+              alt="Apresentação de resultados" class="foto-experiencia"
+              loading="lazy">
+            <p class="legenda-experiencia">Apresentação de Resultados</p>
+          </div>
+        </div>
+        <p class="texto-experiencia">
+          Desde a gestão de produtos na FAPESQ até a tutoria no Projeto CODE,
+          minha jornada é marcada por colaboração, aprendizado contínuo e um
+          compromisso genuíno com o impacto social.
+        </p>
+      </div>
+    </section>
+    <section id="premiacoes" class="secao fundo-claro">
+      <div class="container">
+        <h2>Premiações e Reconhecimentos</h2>
+        <p class="subtitulo">Conquistas que validam o impacto e a dedicação nos
+          projetos.</p>
+        <div class="grade-premiacoes">
+
+          <div class="item-visual">
+            <img src="assets/images/premiacaolabdados.jpg"
+              alt="Premiação LabDados" class="foto-premiacao" loading="lazy">
+            <p class="legenda-premiacao">Destaque em Análise de Dados</p>
+          </div>
+          <div class="item-visual">
+            <img src="assets/images/premiacaomonitoria.jpg"
+              alt="Premiação Monitoria" class="foto-premiacao" loading="lazy">
+            <p class="legenda-premiacao">Reconhecimento por Tutoria</p>
+          </div>
+
+          <div class="item-visual">
+            <img src="assets/images/premiacoesEU.png" alt="Troféu de premiações"
+              class="foto-premiacao" loading="lazy">
+            <p class="legenda-premiacao">Prêmio Empreendedorismo</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao">
+      <div class="container">
+        <h2>Vamos conversar?</h2>
+        <p class="subtitulo">Estou sempre aberta a novos desafios, parcerias e
+          projetos com propósito.</p>
+        <div class="contato-conteudo">
+          <div class="contato-info">
+            <div class="contatos">
+              <a href="mailto:cinthia20lindolfo@gmail.com" target="_blank"
+                rel="noopener" aria-label="Enviar e-mail">
+                <i class="fas fa-envelope"></i> cinthia20lindolfo@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/cinthia-lindolfo"
+                target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i> linkedin.com/in/cinthia-lindolfo
+              </a>
+              <a href="https://github.com/cinthialindolfo" target="_blank"
+                rel="noopener" aria-label="GitHub">
+                <i class="fab fa-github"></i> github.com/cinthialindolfo
+              </a>
+              <a href="https://cinthialindolfo-portifolio.netlify.app"
+                target="_blank" rel="noopener" aria-label="Portfólio">
+                <i class="fas fa-link"></i> Meu Portfólio
+              </a>
+              <a href="tel:+5583981758363" aria-label="Ligar">
+                <i class="fas fa-phone"></i> (83)981758363
+              </a>
+            </div>
+          </div>
+          <div class="contato-imagem">
+            <img src="assets/images/formcf.jpg" alt="Formulário de contato"
+              class="imagem-contato" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Cinthia Lindolfo. Feito com propósito e café ☕</p>
+      </div>
     </footer>
-    <!-- Script -->
+
     <script>
-        function atualizarContador() {
-            if (localStorage.getItem('contadorVisitas')) {
-                var contador = parseInt(localStorage.getItem('contadorVisitas'));
-            } else {
-                var contador = 0;
-            }
-            contador++;
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
 
-            document.getElementById('contador').innerText = contador;
-
-            localStorage.setItem('contadorVisitas', contador);
-        }
-        window.onload = atualizarContador;
-    </script>
-</body>
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+  </body>
 </html>
