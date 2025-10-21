@@ -1,16 +1,18 @@
-/* Estilos CSS para tornar o site mais atraente */
+/* ===== VARIÁVEIS CSS ===== */
 :root {
   --primary: #1b3b7e;
-  --primary-dark: #40d6c2;
+  --primary-dark: #37c3db;
   --secondary: #6C63FF;
   --dark: #2D3748;
   --light: #F7FAFC;
   --gray: #718096;
   --accent: #FF6B6B;
-  --shadow: 0 5px 15px rgba(0,0,0,0.1);
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
+  --border-radius: 15px;
 }
 
+/* ===== RESET E BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +36,7 @@ body {
   padding: 0 20px;
 }
 
-/* Cabeçalho */
+/* ===== CABEÇALHO ===== */
 .cabecalho {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: white;
@@ -76,7 +78,7 @@ body {
   opacity: 0.9;
 }
 
-/* Menu mobile (CSS-only) */
+/* ===== NAVEGAÇÃO ===== */
 .menu-checkbox {
   display: none;
 }
@@ -89,10 +91,10 @@ body {
   height: 30px;
   justify-content: space-between;
   padding: 5px;
-  position: absolute; /* Adicionado */
-  right: 20px; /* Adicionado */
-  top: 30px; /* Adicionado */
-  z-index: 100; /* Adicionado para ficar acima de tudo */
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  z-index: 100;
 }
 
 .menu-toggle span {
@@ -118,28 +120,27 @@ body {
   padding: 10px 20px;
   border-radius: 30px;
   transition: var(--transition);
-  border: 1px solid rgba(255,255,255,0.3);
-  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .navegacao a:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Seções */
+/* ===== SEÇÕES ===== */
 .secao {
   padding: 80px 0;
 }
 
 .fundo-claro {
-  background-color: var(--light);
+  background-color: rgba(63, 109, 233, 0.5);
 }
 
 .fundo-escuro {
-  background-color: var(--dark);
-  color: white;
+  background-color: rgba(63, 109, 233, 0.5);
 }
 
 h2 {
@@ -173,10 +174,11 @@ h2::after {
 }
 
 .fundo-escuro .subtitulo {
-  color: rgba(255,255,255,0.8);
+  /* Aumentado o contraste para acessibilidade */
+  color: white;
 }
 
-/* Sobre */
+/* ===== SOBRE ===== */
 .sobre-conteudo {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -199,7 +201,7 @@ h2::after {
   width: 100%;
   max-height: 300px;
   object-fit: contain;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   background-color: var(--light);
   padding: 10px;
@@ -208,7 +210,7 @@ h2::after {
 .foco {
   background: white;
   padding: 40px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
 }
 
@@ -218,14 +220,14 @@ h2::after {
   font-size: 1.5rem;
 }
 
-.foco ul {
+.lista-foco {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 15px;
 }
 
-.foco li {
+.lista-foco li {
   padding: 15px;
   background: var(--light);
   border-radius: 10px;
@@ -234,19 +236,21 @@ h2::after {
   transition: var(--transition);
 }
 
-.foco li:hover {
+.lista-foco li:hover {
   transform: translateX(10px);
-  background: rgba(46, 139, 87, 0.1);
+  /* Corrigido: Usando a primary com opacidade */
+  background: rgba(27, 59, 126, 0.1);
+  /* Cor primária com opacidade */
 }
 
-.foco i {
+.lista-foco i {
   color: var(--primary);
   margin-right: 15px;
   width: 20px;
   font-size: 1.1rem;
 }
 
-/* Projetos */
+/* ===== PROJETOS ===== */
 .grade-projetos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -256,7 +260,7 @@ h2::after {
 
 .cartao-projeto {
   background: white;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -265,7 +269,7 @@ h2::after {
   flex-direction: column;
   text-decoration: none;
   color: var(--dark);
-  height: auto; /* Ajuste para auto */
+  height: auto;
 }
 
 .cartao-projeto::before {
@@ -280,7 +284,7 @@ h2::after {
 
 .cartao-projeto:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .projeto-imagem {
@@ -301,10 +305,13 @@ h2::after {
 }
 
 .projeto-cargo,
-.projeto-descricao,
-.tag {
+.projeto-descricao {
   padding: 0 20px 10px;
   font-size: 0.95rem;
+}
+
+.tags-container {
+  padding: 0 20px 10px;
 }
 
 .tag {
@@ -312,7 +319,7 @@ h2::after {
   font-style: italic;
 }
 
-/* Habilidades */
+/* ===== HABILIDADES ===== */
 .grade-habilidades {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -323,9 +330,13 @@ h2::after {
 .grupo-habilidade {
   background: white;
   padding: 40px 30px;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   transition: var(--transition);
+}
+
+.grupo-habilidade:hover {
+  transform: translateY(-5px);
 }
 
 .grupo-habilidade h3 {
@@ -346,7 +357,7 @@ h2::after {
   border-bottom: none;
 }
 
-/* Experiência */
+/* ===== EXPERIÊNCIA ===== */
 .galeria-experiencia {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -354,9 +365,9 @@ h2::after {
   margin: 50px auto;
 }
 
-.item-visual { /* Usado para Experiência e Premiações */
+.item-visual {
   background: white;
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
@@ -364,22 +375,22 @@ h2::after {
   flex-direction: column;
   text-align: center;
   padding-bottom: 15px;
-  height: 100%; /* Garante altura uniforme */
+  height: 100%;
 }
 
 .item-visual:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 .foto-experiencia {
   width: 100%;
-  max-height: 250px; /* Mantém a altura máxima para experiência */
+  max-height: 250px;
   height: auto;
   object-fit: contain;
   padding: 15px;
   background-color: var(--light);
-  border-radius: 15px 15px 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
   filter: grayscale(20%);
 }
 
@@ -393,61 +404,16 @@ h2::after {
   color: var(--dark);
   font-size: 1rem;
   font-weight: 600;
-  flex-grow: 1; /* Permite que a legenda ocupe o espaço restante */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* CORREÇÃO: Tamanho das imagens de Premiações */
-.grade-premiacoes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas para desktop */
-  gap: 30px;
-  margin: 50px auto;
-  justify-items: center; /* Centraliza os itens na grade */
-  align-items: start; /* Alinha os itens ao topo */
-}
-
-.foto-premiacao {
-  width: 100%; /* Ocupa a largura total do item do grid */
-  max-width: 200px; /* Limita a largura máxima da imagem em si */
-  height: auto; /* Mantém a proporção */
-  max-height: 180px; /* Altura máxima para as imagens de premiação */
-  object-fit: contain;
-  padding: 10px; /* Reduz o padding para otimizar espaço */
-  background-color: var(--light);
-  border-radius: 10px; /* Bordas um pouco menores */
-  filter: grayscale(20%);
-  transition: var(--transition);
-}
-
-.item-visual .foto-premiacao { /* Garante que o padding e borda sejam aplicados dentro do card */
-    border-radius: 15px 15px 0 0; /* Ajusta as bordas para o topo do card */
-    padding: 15px; /* Retorna o padding ao padrão do card */
-    max-height: 200px; /* Ajusta a altura da imagem dentro do card */
-}
-
-.item-visual:hover .foto-premiacao {
-  filter: grayscale(0%);
-}
-
-.legenda-premiacao {
-  margin-top: 10px; /* Ajusta a margem para mais perto da imagem */
-  padding: 0 10px; /* Reduz o padding */
-  color: var(--dark);
-  font-size: 0.9rem; /* Um pouco menor para caber */
-  font-weight: 600;
   flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
+/* Corrigido: Texto em fundo escuro com alto contraste */
 .fundo-escuro .legenda-experiencia,
 .fundo-escuro .texto-experiencia {
-  color: rgba(255,255,255,0.9);
+  color: rgba(0, 0, 0, 1);
 }
 
 .texto-experiencia {
@@ -455,7 +421,52 @@ h2::after {
   margin-top: 40px;
 }
 
-/* Contato */
+/* ===== PREMIAÇÕES ===== */
+.grade-premiacoes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 50px auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.foto-premiacao {
+  width: 100%;
+  max-width: 200px;
+  max-height: 180px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: var(--light);
+  border-radius: 10px;
+  filter: grayscale(20%);
+  transition: var(--transition);
+}
+
+.item-visual .foto-premiacao {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  padding: 5px;
+  margin: auto;
+  max-height: 200px;
+}
+
+.item-visual:hover .foto-premiacao {
+  filter: grayscale(0%);
+}
+
+.legenda-premiacao {
+  margin-top: 10px;
+  padding: 0 10px;
+  color: var(--dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CONTATO ===== */
 .contato-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -483,13 +494,14 @@ h2::after {
 }
 
 .contatos a:hover {
-  background-color: rgba(46, 139, 87, 0.1);
+  background-color: rgba(27, 59, 126, 0.1);
+  /* Cor primária com opacidade */
   color: var(--primary-dark);
   transform: translateX(5px);
 }
 
 .fundo-escuro .contatos a {
-  color: white;
+  color: rgb(228, 172, 172);
 }
 
 .fundo-escuro .contatos a:hover {
@@ -504,7 +516,7 @@ h2::after {
   box-shadow: var(--shadow);
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
   background: var(--dark);
   color: white;
@@ -512,14 +524,20 @@ footer {
   padding: 30px 0;
 }
 
-/* Responsividade */
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  .grade-premiacoes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
 
   .navegacao {
-    display: none; /* Esconde por padrão no mobile */
+    display: none;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -527,11 +545,12 @@ footer {
     margin-top: 20px;
     padding: 20px 0;
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
+    border-radius: var(--border-radius);
   }
 
-  /* Mostrar menu quando checkbox estiver marcado */
-  .menu-checkbox:checked ~ .navegacao {
+  /* Corrigido: O seletor precisa usar o ID ou a classe correta no input */
+  #menu-toggle:checked~.navegacao,
+  .menu-checkbox:checked~.navegacao {
     display: flex;
   }
 
@@ -554,17 +573,11 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .grade-premiacoes { /* Ajuste para 2 colunas em tablets/pequenos desktops */
-    grid-template-columns: repeat(2, 1fr);
+  .grade-premiacoes {
+    grid-template-columns: 1fr;
   }
 
-  @media (max-width: 480px) { /* Em celulares, volta para 1 coluna */
-      .grade-premiacoes {
-          grid-template-columns: 1fr;
-      }
-  }
-
-  .foco ul {
+  .lista-foco {
     grid-template-columns: 1fr;
   }
 
@@ -578,5 +591,27 @@ footer {
 
   .cabecalho {
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .secao {
+    padding: 60px 0;
+  }
+
+  .nome {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .foco {
+    padding: 25px;
   }
 }

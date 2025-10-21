@@ -16,17 +16,18 @@
   <body>
     <header class="cabecalho">
       <div class="container">
-        <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
-        <label for="menu-checkbox" class="menu-toggle">
+        <img src="assets/images/cinthia.jpg" alt="Cinthia Lindolfo"
+          class="foto-perfil" loading="lazy">
+        <h1 class="nome">Cinthia Lindolfo</h1>
+        <p class="cargo">Product Owner • UX/UI • Tech for Good</p>
+
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
           <span></span>
           <span></span>
           <span></span>
         </label>
 
-        <img src="assets/images/cinthia.jpg" alt="Cinthia Lindolfo"
-          class="foto-perfil" loading="lazy">
-        <h1 class="nome">Cinthia Lindolfo</h1>
-        <p class="cargo">Product Owner • UX/UI • Tech for Good</p>
         <nav class="navegacao">
           <a href="#sobre">Sobre</a>
           <a href="#projetos">Projetos</a>
@@ -38,338 +39,362 @@
       </div>
     </header>
 
-    <section id="sobre" class="secao">
-      <div class="container">
-        <h2>Sobre Mim</h2>
-        <div class="sobre-conteudo">
-          <div class="sobre-texto">
-            <p>
-              Graduanda em <strong>Sistemas de Informação pela UFPB</strong>,
-              atuo como <strong>Product Owner</strong> liderando projetos de
-              tecnologia com impacto social e ambiental.
-              Minha paixão é unir <strong>tecnologia, acessibilidade e
-                sustentabilidade</strong> para criar soluções que promovam
-              inclusão e bem-estar.
-            </p>
-            <p>
-              Com experiência multifuncional em <strong>gestão de produto,
-                UX/UI, análise de dados e desenvolvimento web</strong>, busco
-              sempre uma liderança colaborativa que inspire equipes a entregar
-              resultados com propósito.
-            </p>
-          </div>
-          <div class="sobre-imagem">
-            <img src="assets/images/eucinthia.jpg" alt="Cinthia em ação"
-              class="imagem-destaque" loading="lazy">
-          </div>
-        </div>
-        <div class="foco">
-          <h3>Áreas de Atuação</h3>
-          <ul>
-            <li><i class="fas fa-bullseye"></i> Product Management</li>
-            <li><i class="fas fa-palette"></i> UX/UI &amp; Web Design</li>
-            <li><i class="fas fa-chart-line"></i> Análise de Dados (Power
-              BI)</li>
-            <li><i class="fas fa-leaf"></i> Inovação Sustentável</li>
-            <li><i class="fas fa-microchip"></i> Deep Tech &amp; Tech for
-              Good</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="secao fundo-claro">
-      <div class="container">
-        <h2>Projetos em Destaque</h2>
-        <div class="grade-projetos">
-
-          <div class="cartao-projeto">
-            <img src="assets/images/projetobeescaatinga.jpg"
-              alt="Projeto BeesCaatinga" class="projeto-imagem" loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-bee"></i> BeesCaatinga</h3>
-                <p class="projeto-cargo">Product Owner – FAPESQ/SECTIES/PB</p>
-                <p class="projeto-descricao">Gestão de produto, validação com
-                  apicultores e design de UX para solução de gestão de produção de mel na Caatinga.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Tecnologia • Gestão • SocioAmbiental</span>
-              </div>
+    <main>
+      <section id="sobre" class="secao">
+        <div class="container">
+          <h2>Sobre Mim</h2>
+          <div class="sobre-conteudo">
+            <div class="sobre-texto">
+              <p>
+                Graduanda em <strong>Sistemas de Informação pela UFPB</strong>,
+                atuo como <strong>Product Owner</strong> liderando projetos de
+                tecnologia com impacto social e ambiental.
+                Minha paixão é unir <strong>tecnologia, acessibilidade e
+                  sustentabilidade</strong> para criar soluções que promovam
+                inclusão e bem-estar.
+              </p>
+              <p>
+                Com experiência multifuncional em <strong>gestão de produto,
+                  UX/UI design, análise de dados e desenvolvimento
+                  front-end</strong>, busco uma liderança colaborativa que
+                inspire equipes a entregar resultados claros e com propósito.
+              </p>
+            </div>
+            <div class="sobre-imagem">
+              <img src="assets/images/eucinthia.jpg" alt="Cinthia em ação"
+                class="imagem-destaque" loading="lazy">
             </div>
           </div>
-
-          <div class="cartao-projeto">
-            <img src="assets/images/projreflorae.jpg"
-              alt="Projeto Viveiro de Mudas" class="projeto-imagem"
-              loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-seedling"></i> Viveiro de Mudas</h3>
-                <p class="projeto-cargo">Product Owner – UFPB/PROEX</p>
-                <p class="projeto-descricao">Sistema para gestão de viveiros
-                  comunitários, com foco em educação ambiental e tecnologia
-                  cidadã.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Educação • Meio Ambiente • UX</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cartao-projeto">
-            <img src="assets/images/eartesan-pitch.jpg" alt="Projeto e-artesan"
-              class="projeto-imagem" loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-shopping-basket"></i> e-artesan</h3>
-                <p class="projeto-cargo">CEO – Pré-Incubação PTHI</p>
-                <p class="projeto-descricao">Plataforma digital para artesãos
-                  locais, conectando produção cultural à economia criativa e
-                  sustentável.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Economia Criativa • Empreendedorismo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cartao-projeto">
-            <img src="assets/images/brgweb.jpg" alt="Projeto BRG Web"
-              class="projeto-imagem" loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-globe"></i> BRG Web</h3>
-                <p class="projeto-cargo">Desenvolvimento Front-end</p>
-                <p class="projeto-descricao">Site institucional para a empresa
-                  de energia renovável BRG Energia.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Web Dev • Front-end • Energia</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cartao-projeto">
-            <img src="assets/images/code.jpg" alt="Projeto CODE"
-              class="projeto-imagem" loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-users"></i> Projeto CODE</h3>
-                <p class="projeto-cargo">Tutora – FUNETEC-PB</p>
-                <p class="projeto-descricao">Auxiliei estudantes no
-                  desenvolvimento de aplicativos móveis com MIT App
-                  Inventor.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Educação • Inclusão Digital •
-                  Programação</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cartao-projeto">
-            <img src="assets/images/eartesan-ex-ceo.jpg" alt="e-artesan CEO"
-              class="projeto-imagem" loading="lazy">
-            <div class="cartao-projeto-detalhes">
-              <div>
-                <h3><i class="fas fa-rocket"></i> Empreendedorismo</h3>
-                <p class="projeto-cargo">CEO e Founder – e-artesan</p>
-                <p class="projeto-descricao">Liderança estratégica e
-                  desenvolvimento de negócios na economia criativa e
-                  sustentável.</p>
-              </div>
-              <div class="tags-container">
-                <span class="tag">Liderança • Startups • Inovação</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="habilidades" class="secao">
-      <div class="container">
-        <h2>Habilidades &amp; Competências</h2>
-        <div class="grade-habilidades">
-          <div class="grupo-habilidade">
-            <h3><i class="fas fa-code"></i> Técnicas</h3>
-            <ul>
-              <li>Product Management (MRD, PRD, User Stories)</li>
-              <li>UX/UI Design (Figma, protótipos)</li>
-              <li>Desenvolvimento Web (HTML, CSS)</li>
-              <li>Power BI • Análise de Dados</li>
-              <li>Testes de Qualidade • Checklist</li>
-            </ul>
-          </div>
-          <div class="grupo-habilidade">
-            <h3><i class="fas fa-heart"></i> Pessoais</h3>
-            <ul>
-              <li>Liderança Colaborativa</li>
-              <li>Inteligência Emocional</li>
-              <li>Comunicação Assertiva</li>
-              <li>Resiliência • Criatividade</li>
-              <li>Foco em Propósito e Impacto</li>
-            </ul>
-          </div>
-          <div class="grupo-habilidade">
-            <h3><i class="fas fa-award"></i> Certificações</h3>
-            <ul>
-              <li>Introdução à Liderança Disruptiva (FDL)</li>
-              <li>Power BI – T01</li>
-              <li>Bootcamp Conect.AI – Deep Tech</li>
-              <li>Desafio Liga Jovem – Sebrae</li>
-              <li>Pré-Incubação – PTHI</li>
+          <div class="foco">
+            <h3>Áreas de Atuação</h3>
+            <ul class="lista-foco">
+              <li><i class="fas fa-bullseye" aria-hidden="true"></i> Product
+                Management (MRD, PRD)</li>
+              <li><i class="fas fa-palette" aria-hidden="true"></i> UX/UI &amp;
+                Web Design</li>
+              <li><i class="fas fa-chart-line" aria-hidden="true"></i> Análise
+                de Dados (Power BI)</li>
+              <li><i class="fas fa-leaf" aria-hidden="true"></i> Inovação
+                Sustentável e Tech for Good</li>
+              <li><i class="fas fa-handshake" aria-hidden="true"></i> Impacto
+                Social e Acessibilidade</li>
+              <li><i class="fas fa-microchip" aria-hidden="true"></i> Deep Tech
+                &amp; Empreendedorismo</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="experiencia" class="secao fundo-escuro">
-      <div class="container">
-        <h2>Minha Experiência em Ação</h2>
-        <p class="subtitulo">Veja como eu colaborei em diferentes projetos e
-          equipes.</p>
-        <div class="galeria-experiencia">
-          <div class="item-visual">
-            <img src="assets/images/realtodeexperiencia.jpg"
-              alt="Reunião virtual com equipe do BeesCaatinga"
-              class="foto-experiencia" loading="lazy">
-            <p class="legenda-experiencia">Reunião de equipe - BeesCaatinga</p>
-          </div>
+      <section id="projetos" class="secao fundo-claro">
+        <div class="container">
+          <h2>Projetos em Destaque</h2>
+          <div class="grade-projetos">
 
-          <div class="item-visual">
-            <img src="assets/images/intercambio.jpg"
-              alt="Imersão na Anatel em Brasília" class="foto-experiencia"
-              loading="lazy">
-            <p class="legenda-experiencia">Imersão técnica - Anatel Brasília</p>
-          </div>
+            <div class="cartao-projeto">
+              <img src="assets/images/beescaatinga.jpg"
+                alt="Projeto BeesCaatinga" class="projeto-imagem"
+                loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-jar" aria-hidden="true"></i> BeesCaatinga
+                  </h3>
+                  <p class="projeto-cargo">Product Owner – FAPESQ/SECTIES/PB</p>
+                  <p class="projeto-descricao">Liderança como PO na gestão do
+                    produto de gestão da produção de mel.
+                    Atuação direta com cliente-piloto para validação contínua e
+                    garantia do 'Product-Market Fit' entre tecnologia e
+                    preservação ambiental.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Tecnologia • SocioAmbiental • Gestão</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="item-visual">
-            <img src="assets/images/networks.jpg"
-              alt="Networking em eventos de tecnologia" class="foto-experiencia"
-              loading="lazy">
-            <p class="legenda-experiencia">Networking - Eventos Tech</p>
-          </div>
+            <div class="cartao-projeto">
+              <img src="assets/images/reflorae.jpg"
+                alt="Projeto Viveiro de Mudas" class="projeto-imagem"
+                loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-seedling" aria-hidden="true"></i>
+                    Reflora-aê </h3>
+                  <p class="projeto-cargo">Product Owner – UFPB/PROEX</p>
+                  <p class="projeto-descricao">Liderança como PO na definição e
+                    priorização de requisitos para sistema de gestão de
+                    gerenciamento de sementes e viveiros de mudas .
+                    Coordenação com cliente-piloto para desenvolvimento da
+                    solução através do programa Tecnologia Cidadã 2025.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Tecnologia Cidadã • SocioAmbiental •
+                    Gestão</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="item-visual">
-            <img src="assets/images/forumcfbanner.jpg"
-              alt="Participação em fórum de inovação" class="foto-experiencia"
-              loading="lazy">
-            <p class="legenda-experiencia">Fórum de Inovação</p>
-          </div>
+            <div class="cartao-projeto">
+              <img src="assets/images/eartesan-pitch.jpg"
+                alt="Projeto e-artesan" class="projeto-imagem" loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-shopping-basket"
+                      aria-hidden="true"></i>E-Artesan</h3>
+                  <p class="projeto-cargo">Ex-CEO – PTHI/SECTIES </p>
+                  <p class="projeto-descricao">Liderança como Ex-CEO na
+                    plataforma digital para artesãos locais, conectando produção
+                    artesanal à economia criativa.
+                    Desenvolvimento do negócio durante programa de pré-incubação
+                    com apresentação para banca de especialistas e mentoria em
+                    gestão empresarial.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Tecnologia • Inovação • Gestão</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="item-visual">
-            <img src="assets/images/intercambiobr.jpeg"
-              alt="Intercâmbio internacional" class="foto-experiencia"
-              loading="lazy">
-            <p class="legenda-experiencia">Intercâmbio Internacional</p>
-          </div>
+            <div class="cartao-projeto">
+              <img src="assets/images/brgweb.jpg" alt="Projeto BRG Web"
+                class="projeto-imagem" loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-globe" aria-hidden="true"></i> Grupo
+                    BRG</h3>
+                  <p class="projeto-cargo">Product Owner (PO) e Gerente
+                    Geral</p>
+                  <p class="projeto-descricao">Liderança dupla como PO e Gerente
+                    Geral em empresa de soluções digitais sustentáveis.
+                    Definição da visão estratégica (MRD/PRD),
+                    coordenação de equipes multidisciplinares e gestão
+                    administrativa com foco em eficiência operacional e inovação
+                    tecnológica.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Estratégia • Gestão • Liderança</span>
+                </div>
+              </div>
+            </div>
 
-          <div class="item-visual">
-            <img src="assets/images/relatodeexperiencia1.jpg"
-              alt="Apresentação de resultados" class="foto-experiencia"
-              loading="lazy">
-            <p class="legenda-experiencia">Apresentação de Resultados</p>
+            <div class="cartao-projeto">
+              <img src="assets/images/code.jpg" alt="Projeto CODE"
+                class="projeto-imagem" loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-users" aria-hidden="true"></i> Projeto
+                    CODE</h3>
+                  <p class="projeto-cargo">Tutora – FUNETEC-PB</p>
+                  <p class="projeto-descricao">Atuação como tutora no programa
+                    de ensino de programação para escolas fundamentais.
+                    Facilitação do aprendizado com MIT App Inventor,
+                    supervisão de alunos e monitores, e fortalecimento de
+                    pensamento computacional em jovens.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Educação • Liderança • Programação</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="cartao-projeto">
+              <img src="assets/images/projtolabdados.jpg" alt="Equipe LabDados"
+                class="projeto-imagem" loading="lazy">
+              <div class="cartao-projeto-detalhes">
+                <div>
+                  <h3><i class="fas fa-database" aria-hidden="true"></i>
+                    LabDados</h3>
+                  <p class="projeto-cargo">Analista de Dados – UFPB/PROEX</p>
+                  <p class="projeto-descricao">Atuação como Analista de Dados no
+                    programa Tecnologia Cidadã 2023. Análise, limpeza e
+                    visualização de dados públicos com Power BI
+                    para subsidiar decisões em projetos sociais e comunitários,
+                    contribuindo para políticas públicas baseadas em
+                    evidências.</p>
+                </div>
+                <div class="tags-container">
+                  <span class="tag">Power BI • Análise de Dados • Tecnologia
+                    Cidadã</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-        <p class="texto-experiencia">
-          Desde a gestão de produtos na FAPESQ até a tutoria no Projeto CODE,
-          minha jornada é marcada por colaboração, aprendizado contínuo e um
-          compromisso genuíno com o impacto social.
-        </p>
-      </div>
-    </section>
-    <section id="premiacoes" class="secao fundo-claro">
-      <div class="container">
-        <h2>Premiações e Reconhecimentos</h2>
-        <p class="subtitulo">Conquistas que validam o impacto e a dedicação nos
-          projetos.</p>
-        <div class="grade-premiacoes">
+      </section>
 
-          <div class="item-visual">
-            <img src="assets/images/premiacaolabdados.jpg"
-              alt="Premiação LabDados" class="foto-premiacao" loading="lazy">
-            <p class="legenda-premiacao">Destaque em Análise de Dados</p>
-          </div>
-          <div class="item-visual">
-            <img src="assets/images/premiacaomonitoria.jpg"
-              alt="Premiação Monitoria" class="foto-premiacao" loading="lazy">
-            <p class="legenda-premiacao">Reconhecimento por Tutoria</p>
-          </div>
-
-          <div class="item-visual">
-            <img src="assets/images/premiacoesEU.png" alt="Troféu de premiações"
-              class="foto-premiacao" loading="lazy">
-            <p class="legenda-premiacao">Prêmio Empreendedorismo</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="contato" class="secao">
-      <div class="container">
-        <h2>Vamos conversar?</h2>
-        <p class="subtitulo">Estou sempre aberta a novos desafios, parcerias e
-          projetos com propósito.</p>
-        <div class="contato-conteudo">
-          <div class="contato-info">
-            <div class="contatos">
-              <a href="mailto:cinthia20lindolfo@gmail.com" target="_blank"
-                rel="noopener" aria-label="Enviar e-mail">
-                <i class="fas fa-envelope"></i> cinthia20lindolfo@gmail.com
-              </a>
-              <a href="https://www.linkedin.com/in/cinthia-lindolfo"
-                target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i> linkedin.com/in/cinthia-lindolfo
-              </a>
-              <a href="https://github.com/cinthialindolfo" target="_blank"
-                rel="noopener" aria-label="GitHub">
-                <i class="fab fa-github"></i> github.com/cinthialindolfo
-              </a>
-              <a href="https://cinthialindolfo-portifolio.netlify.app"
-                target="_blank" rel="noopener" aria-label="Portfólio">
-                <i class="fas fa-link"></i> Meu Portfólio
-              </a>
-              <a href="tel:+5583981758363" aria-label="Ligar">
-                <i class="fas fa-phone"></i> (83)981758363
-              </a>
+      <section id="habilidades" class="secao">
+        <div class="container">
+          <h2>Habilidades &amp; Competências</h2>
+          <div class="grade-habilidades">
+            <div class="grupo-habilidade">
+              <h3><i class="fas fa-code" aria-hidden="true"></i> Técnicas</h3>
+              <ul>
+                <li>Product Management (MRD, PRD, User Stories)</li>
+                <li>UX/UI Design (Figma, protótipos)</li>
+                <li>Desenvolvimento Web (HTML, CSS)</li>
+                <li>Power BI • Análise de Dados</li>
+                <li>Testes de Qualidade • Checklist</li>
+              </ul>
+            </div>
+            <div class="grupo-habilidade">
+              <h3><i class="fas fa-heart" aria-hidden="true"></i> Pessoais</h3>
+              <ul>
+                <li>Liderança Colaborativa</li>
+                <li>Inteligência Emocional</li>
+                <li>Comunicação Assertiva e Interpessoal</li>
+                <li>Resiliência • Criatividade</li>
+                <li>Foco em Propósito e Impacto</li>
+              </ul>
+            </div>
+            <div class="grupo-habilidade">
+              <h3><i class="fas fa-award" aria-hidden="true"></i>
+                Certificações</h3>
+              <ul>
+                <li>Introdução à Liderança Disruptiva (FDL)</li>
+                <li>Power BI</li>
+                <li>Bootcamp Conect.AI – Deep Tech (VIRTUS/UFCG)</li>
+                <li>Desafio Liga Jovem – Sebrae</li>
+                <li>Pré-Incubação – PTHI/SECTIES (Capacitação)</li>
+              </ul>
             </div>
           </div>
-          <div class="contato-imagem">
-            <img src="assets/images/formcf.jpg" alt="Formulário de contato"
-              class="imagem-contato" loading="lazy">
+        </div>
+      </section>
+
+      <section id="experiencia" class="secao fundo-escuro">
+        <div class="container">
+          <h2>Minha Experiência em Ação</h2>
+          <p class="subtitulo">Veja como eu colaborei em diferentes projetos e
+            equipes.</p>
+          <div class="galeria-experiencia">
+            <div class="item-visual">
+              <img src="assets/images/realtodeexperiencia.jpg"
+                alt="Reunião virtual com equipe do BeesCaatinga"
+                class="foto-experiencia" loading="lazy">
+              <p class="legenda-experiencia">R.Tech -
+                Meu Relato de Experiência (De onde vim até onde sonho)</p>
+            </div>
+
+            <div class="item-visual">
+              <img src="assets/images/intercambio.jpg"
+                alt="Imersão na Anatel em Brasília" class="foto-experiencia"
+                loading="lazy">
+              <p class="legenda-experiencia">Intercâmbio DF - Ceadi/P@edi</p>
+            </div>
+
+            <div class="item-visual">
+              <img src="assets/images/networks.jpg"
+                alt="Networking em eventos de tecnologia"
+                class="foto-experiencia" loading="lazy">
+              <p class="legenda-experiencia">Networking - Eventos Tech</p>
+            </div>
+
+            <div class="item-visual">
+              <img src="assets/images/formcf.jpg"
+                alt="Participação em fórum de inovação" class="foto-experiencia"
+                loading="lazy">
+              <p class="legenda-experiencia">II Fórum Celso Furtado - Exposição
+                BeesCaatinga</p>
+            </div>
+
+            <div class="item-visual">
+              <img src="assets/images/intercambiobr.jpeg"
+                alt="Intercâmbio internacional" class="foto-experiencia"
+                loading="lazy">
+              <p class="legenda-experiencia">Intercâmbio DF - Ceadi/P@edi</p>
+            </div>
+
+            <div class="item-visual">
+              <img src="assets/images/eartesan -ex-ceo.jpg"
+                alt="Apresentação de resultados" class="foto-experiencia"
+                loading="lazy">
+              <p class="legenda-experiencia"> Pitch - Apresentação de Resultados
+                - PTHI/SECTIES</p>
+            </div>
+          </div>
+          <p class="texto-experiencia">
+            Minha jornada é movida pela crença de que a tecnologia, quando
+            guiada por valores humanos,
+            pode transformar realidades e criar futuros mais justos. Cada passo
+            que dou é impulsionado
+            pela colaboração genuína e pela busca constante por aprendizado que
+            faça a diferença
+            na vida das pessoas.
+          </p>
+        </div>
+      </section>
+      <section id="premiacoes" class="secao fundo-claro">
+        <div class="container">
+          <h2>Premiações e Reconhecimentos</h2>
+          <p class="subtitulo">Conquistas que validam o impacto e a minha
+            dedicação nos projetos.</p>
+          <div class="grade-premiacoes">
+
+            <div class="item-visual">
+              <img src="assets/images/premiacoesEU.png"
+                alt="Troféu de premiações" class="foto-premiacao"
+                loading="lazy">
+              <p class="legenda-premiacao"> Dia de receber as premiações do ENID e ENEX 2023 </p>
+            </div>
+            <div class="item-visual">
+              <img src="assets/images/premiacaolabdados.jpg"
+                alt="Premiação LabDados" class="foto-premiacao" loading="lazy">
+              <p class="legenda-premiacao"> Ficamos entre os 5 melhores projetos e tivemos nosso projeto publicado no E-book do ENEX
+                (Tecnlogia Cidadã - LabDados ENEX/PROEX)</p>
+            </div>
+            <div class="item-visual">
+              <img src="assets/images/premiacaomonitoria.jpg"
+                alt="Premiação Monitoria" class="foto-premiacao" loading="lazy">
+              <p class="legenda-premiacao">Ficamos entre os 5 melhores projetos (Monitoria - Intr. à Sociologia - ENID)</p>
+            </div>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section id="contato" class="secao">
+        <div class="container">
+          <h2>Vamos conversar?</h2>
+          <p class="subtitulo">Estou sempre aberta a novos desafios, parcerias e
+            projetos com propósito.</p>
+          <div class="contato-conteudo">
+            <div class="contato-info">
+              <div class="contatos">
+                <a href="mailto:cinthia20lindolfo@gmail.com" target="_blank"
+                  rel="noopener" aria-label="Enviar e-mail">
+                  <i class="fas fa-envelope"></i> cinthia20lindolfo@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/cinthia-lindolfo"
+                  target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin"></i>
+                  linkedin.com/in/cinthia-lindolfo
+                </a>
+                <a href="https://github.com/cinthialindolfo" target="_blank"
+                  rel="noopener" aria-label="GitHub">
+                  <i class="fab fa-github"></i> github.com/cinthialindolfo
+                </a>
+                <a href="https://cinthialindolfo-portifolio.netlify.app"
+                  target="_blank" rel="noopener" aria-label="Portfólio">
+                  <i class="fas fa-link"></i> Meu Portfólio
+                </a>
+                <a href="tel:+5583981758363" aria-label="Ligar">
+                  <i class="fas fa-phone"></i> (83)981758363
+                </a>
+              </div>
+            </div>
+            <div class="contato-imagem">
+              <img src="assets/images/cinthia2.jpg" alt="Formulário de contato"
+                class="imagem-contato" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Cinthia Lindolfo. Feito com propósito e café ☕</p>
+        <p>&copy; 2025 Cinthia Lindolfo. Feito com propósito e determinação</p>
       </div>
     </footer>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    });
-  </script>
   </body>
 </html>
