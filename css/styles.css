@@ -136,11 +136,11 @@ body {
 }
 
 .fundo-claro {
-  background-color: rgba(63, 109, 233, 0.5);
+  background-color: rgba(63, 109, 233, 0.05);
 }
 
 .fundo-escuro {
-  background-color: rgba(63, 109, 233, 0.5);
+  background-color: rgba(63, 109, 233, 0.1);
 }
 
 h2 {
@@ -149,6 +149,7 @@ h2 {
   position: relative;
   display: inline-block;
   font-weight: 600;
+  color: var(--primary);
 }
 
 h2::after {
@@ -158,12 +159,8 @@ h2::after {
   left: 0;
   width: 80px;
   height: 4px;
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   border-radius: 2px;
-}
-
-.fundo-escuro h2::after {
-  background-color: var(--secondary);
 }
 
 .subtitulo {
@@ -171,11 +168,6 @@ h2::after {
   margin-bottom: 40px;
   color: var(--gray);
   max-width: 600px;
-}
-
-.fundo-escuro .subtitulo {
-  /* Aumentado o contraste para acessibilidade */
-  color: white;
 }
 
 /* ===== SOBRE ===== */
@@ -199,12 +191,10 @@ h2::after {
 
 .imagem-destaque {
   width: 100%;
-  max-height: 300px;
-  object-fit: contain;
+  max-height: 350px;
+  object-fit: cover;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  background-color: var(--light);
-  padding: 10px;
 }
 
 .foco {
@@ -238,9 +228,7 @@ h2::after {
 
 .lista-foco li:hover {
   transform: translateX(10px);
-  /* Corrigido: Usando a primary com opacidade */
   background: rgba(27, 59, 126, 0.1);
-  /* Cor primária com opacidade */
 }
 
 .lista-foco i {
@@ -267,9 +255,7 @@ h2::after {
   position: relative;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: var(--dark);
-  height: auto;
+  height: 100%;
 }
 
 .cartao-projeto::before {
@@ -279,7 +265,7 @@ h2::after {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
 }
 
 .cartao-projeto:hover {
@@ -287,36 +273,57 @@ h2::after {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* --- AQUI ESTAVA A MUDANÇA: RESTAURADO AO ORIGINAL --- */
 .projeto-imagem {
   width: 100%;
-  max-height: 250px;
-  height: auto;
+  max-height: 250px; /* Restaurado max-height */
+  height: auto;      /* Restaurado height auto para não esticar */
   object-fit: contain;
   padding: 10px;
   background-color: var(--light);
 }
 
+.cartao-projeto-detalhes {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 .cartao-projeto h3 {
-  padding: 20px 20px 10px;
+  margin-bottom: 10px;
   color: var(--primary);
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+  gap: 10px;
 }
 
-.projeto-cargo,
-.projeto-descricao {
-  padding: 0 20px 10px;
+.projeto-cargo {
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 10px;
   font-size: 0.95rem;
 }
 
+.projeto-descricao {
+  font-size: 0.95rem;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
 .tags-container {
-  padding: 0 20px 10px;
+  border-top: 1px dashed #eee;
+  padding-top: 15px;
+  margin-top: auto;
 }
 
 .tag {
   color: var(--gray);
+  font-size: 0.85rem;
   font-style: italic;
+  display: block;
 }
 
 /* ===== HABILIDADES ===== */
@@ -342,6 +349,9 @@ h2::after {
 .grupo-habilidade h3 {
   margin-bottom: 20px;
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .grupo-habilidade ul {
@@ -373,16 +383,16 @@ h2::after {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  text-align: center;
-  padding-bottom: 15px;
   height: 100%;
+  padding-bottom: 15px;
 }
 
 .item-visual:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* --- RESTAURADO --- */
 .foto-experiencia {
   width: 100%;
   max-height: 250px;
@@ -392,6 +402,7 @@ h2::after {
   background-color: var(--light);
   border-radius: var(--border-radius) var(--border-radius) 0 0;
   filter: grayscale(20%);
+  transition: var(--transition);
 }
 
 .item-visual:hover .foto-experiencia {
@@ -399,26 +410,23 @@ h2::after {
 }
 
 .legenda-experiencia {
-  margin-top: 15px;
-  padding: 0 15px;
+  padding: 15px;
   color: var(--dark);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  flex-grow: 1;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Corrigido: Texto em fundo escuro com alto contraste */
-.fundo-escuro .legenda-experiencia,
-.fundo-escuro .texto-experiencia {
-  color: rgba(0, 0, 0, 1);
+  flex-grow: 1;
 }
 
 .texto-experiencia {
   text-align: center;
   margin-top: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== PREMIAÇÕES ===== */
@@ -431,6 +439,7 @@ h2::after {
   align-items: center;
 }
 
+/* --- RESTAURADO --- */
 .foto-premiacao {
   width: 100%;
   max-width: 200px;
@@ -444,10 +453,10 @@ h2::after {
 }
 
 .item-visual .foto-premiacao {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-  padding: 5px;
-  margin: auto;
-  max-height: 200px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 5px;
+    margin: auto;
+    max-height: 200px;
 }
 
 .item-visual:hover .foto-premiacao {
@@ -464,6 +473,7 @@ h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 /* ===== CONTATO ===== */
@@ -478,7 +488,6 @@ h2::after {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 20px;
 }
 
 .contatos a {
@@ -489,30 +498,23 @@ h2::after {
   text-decoration: none;
   font-size: 1.1rem;
   transition: var(--transition);
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .contatos a:hover {
-  background-color: rgba(27, 59, 126, 0.1);
-  /* Cor primária com opacidade */
-  color: var(--primary-dark);
-  transform: translateX(5px);
-}
-
-.fundo-escuro .contatos a {
-  color: rgb(228, 172, 172);
-}
-
-.fundo-escuro .contatos a:hover {
+  background-color: var(--primary);
   color: white;
+  transform: translateX(10px);
 }
 
 .imagem-contato {
-  max-height: 300px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 10px;
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain; /* Ajustado para garantir visualização */
+  border-radius: 20px;
   box-shadow: var(--shadow);
 }
 
@@ -522,6 +524,7 @@ footer {
   color: white;
   text-align: center;
   padding: 30px 0;
+  margin-top: 50px;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -539,26 +542,22 @@ footer {
   .navegacao {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
     width: 100%;
     margin-top: 20px;
-    padding: 20px 0;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
   }
 
-  /* Corrigido: O seletor precisa usar o ID ou a classe correta no input */
-  #menu-toggle:checked~.navegacao,
-  .menu-checkbox:checked~.navegacao {
+  /* Faz o menu aparecer quando o checkbox está marcado */
+  .menu-checkbox:checked ~ .navegacao {
     display: flex;
   }
 
   .navegacao a {
     width: 100%;
     text-align: center;
-    padding: 12px;
-    max-width: 250px;
   }
 
   .sobre-conteudo,
@@ -566,31 +565,22 @@ footer {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-
-  .grade-projetos,
-  .grade-habilidades,
-  .galeria-experiencia {
-    grid-template-columns: 1fr;
+  
+  .imagem-contato {
+    max-height: 300px;
   }
-
+  
   .grade-premiacoes {
-    grid-template-columns: 1fr;
-  }
-
-  .lista-foco {
-    grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
   }
 
   .nome {
     font-size: 2rem;
   }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  .cabecalho {
-    padding: 40px 0;
+  
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -600,7 +590,7 @@ footer {
   }
 
   .secao {
-    padding: 60px 0;
+    padding: 50px 0;
   }
 
   .nome {
@@ -610,8 +600,8 @@ footer {
   h2 {
     font-size: 1.8rem;
   }
-
-  .foco {
-    padding: 25px;
+  
+  .grade-projetos {
+    grid-template-columns: 1fr;
   }
 }
