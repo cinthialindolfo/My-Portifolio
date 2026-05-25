@@ -100,18 +100,18 @@ body {
 
 .logo {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--dark);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
     transition: var(--theme-transition);
 }
 
 .logo-dot {
     color: var(--primary);
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 .nav-links {
@@ -206,12 +206,8 @@ body {
 
 /* HERO */
 .hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    padding: calc(var(--header-height) + 20px) 20px 40px;
-    background: linear-gradient(160deg, var(--bg-alt), var(--bg), var(--accent-light), var(--secondary-light));
-    transition: var(--theme-transition);
+    min-height: 60vh; /* Diminuí a altura mínima de 80vh para 60vh */
+    padding: calc(var(--header-height) + 20px) 20px 20px;
 }
 
 .hero-container {
@@ -272,6 +268,8 @@ body {
 
 .highlight {
     background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background-clip: text;
+    /* standard property for compatibility */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -340,9 +338,10 @@ body {
 .hero-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Mantém o preenchimento */
+    object-position: top center; /* Centraliza no topo, onde está o seu rosto */
     border-radius: 50%;
-    border: 4px solid var(--bg-card);
+    border: 3px solid var(--bg-card);
     box-shadow: var(--shadow-xl);
     z-index: 2;
     position: relative;
@@ -352,10 +351,9 @@ body {
 /* SEÇÕES (Espaçamento Ajustado) */
 .section,
 .section-full {
-    padding: 60px 20px;
+    padding: 40px 20px; /* Reduzi de 60px para 40px */
     max-width: var(--max-width);
     margin: 0 auto;
-    transition: var(--theme-transition);
 }
 
 .section-full {
@@ -373,7 +371,7 @@ body {
 
 .section-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 25px; /* Reduzi de 35px para 25px */
 }
 
 .section-label {
@@ -423,7 +421,8 @@ body {
 .about-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Ajustado para não cortar o rosto */
+    background-color: var(--bg-card);
     transition: transform 0.3s ease;
 }
 
@@ -480,9 +479,10 @@ body {
 /* CARDS DE ATUAÇÃO (Foco) */
 .focus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    /* Reduzido de 15px */
+    margin-top: 25px;
 }
 
 .focus-card {
@@ -581,8 +581,8 @@ body {
 .project-image {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Garante que a imagem apareça inteira sem cortes */
-    padding: 10px; /* Espaço interno para não encostar nas bordas */
+    object-fit: contain;
+    padding: 12px;
     transition: transform 0.3s ease;
 }
 
@@ -593,7 +593,8 @@ body {
 .project-image-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(15, 23, 42, 0.2); /* Overlay mais sutil para não esconder o conteúdo */
+    background: rgba(15, 23, 42, 0.2);
+    /* Overlay mais sutil para não esconder o conteúdo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -646,7 +647,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: auto; /* Empurra as tags para o final do card */
+    margin-top: auto;
+    /* Empurra as tags para o final do card */
 }
 
 .project-tag {
@@ -738,9 +740,10 @@ body {
 .experience-card-image {
     width: 100%;
     aspect-ratio: 16/9;
-    object-fit: contain; /* Foto inteira sem cortes */
-    background: var(--bg-alt);
-    padding: 5px;
+    /* Também garantimos o contain aqui para fotos de logos ou momentos */
+    object-fit: contain;
+    background-color: var(--bg-alt);
+    padding: 10px;
 }
 
 .experience-card-body {
@@ -786,10 +789,9 @@ body {
 .award-card-image {
     width: 100%;
     aspect-ratio: 4/3;
-    object-fit: contain; /* Certificado inteiro sem cortes */
+    object-fit: contain;
     background: var(--bg-alt);
     padding: 15px;
-    transition: var(--theme-transition);
 }
 
 .award-card-body {
@@ -866,8 +868,11 @@ body {
 .contact-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top; /* Garante que a cabeça não seja cortada */
+    /* Mudamos de 'cover' para 'contain' para não cortar seu rosto */
+    object-fit: contain;
+    /* Adicionamos uma cor de fundo caso a foto não seja quadrada, 
+       isso evita que fique transparente/vazado */
+    background-color: var(--bg-card);
     transition: transform 0.3s ease;
 }
 
@@ -991,13 +996,13 @@ body {
 
     .section,
     .section-full {
-        padding: 40px 15px;
+        padding: 30px 15px;
+        /* Reduzido de 40px */
     }
 
     /* Ajuste de tela menor */
     .hero {
-        padding: 100px 15px 40px;
-        text-align: center;
+        padding: 90px 15px 30px;
     }
 
     .hero-image-wrapper {
