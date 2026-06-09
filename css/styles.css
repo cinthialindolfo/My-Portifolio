@@ -1018,14 +1018,28 @@ body {
     }
 
     .about-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Mudado de 1fr para 2 colunas */
+        gap: 8px;
+    }
+
+    /* Cards de atuação (Foco) menores e em 2 colunas no celular */
+    .focus-grid {
+        grid-template-columns: repeat(2, 1fr); /* Mudado de 1fr para 2 colunas */
         gap: 10px;
     }
 
-    /* CORREÇÃO CHAVE: Força 1 coluna nos cards "Sobre Mim" pra não espremer no celular */
-    .focus-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+    .focus-card {
+        padding: 15px 10px;
+    }
+
+    .focus-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .focus-card h4 {
+        font-size: 0.75rem;
     }
 
     .hero-actions {

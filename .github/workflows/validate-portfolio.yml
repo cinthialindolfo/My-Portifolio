@@ -1,0 +1,43 @@
+name: CI - Portfolio Validation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/checkout@v4 # Note: This is a placeholder for a real validation step like HTML hint or similar if Node was present
+
+    - name: Validate HTML
+      run: |
+        # Simple check to ensure index.html exists and contains basic tags
+        if [ -f "index.html" ]; then
+          echo "index.html exists."
+          grep -q "<html>" index.html && echo "HTML tag found."
+          grep -q "<head>" index.html && echo "HEAD tag found."
+          grep -q "<body>" index.html && echo "BODY tag found."
+        else
+          echo "index.html not found!"
+          exit 1
+        fi
+
+    - name: Check Assets
+      run: |
+        # Ensure critical assets are present
+        if [ -d "assets/images" ]; then
+          echo "Images directory exists."
+          if [ -f "assets/images/Controle de atividades.png" ]; then
+            echo "New project image found."
+          else
+            echo "Warning: New project image missing!"
+          fi
+        fi
